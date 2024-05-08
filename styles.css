@@ -1,0 +1,134 @@
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    
+    justify-content: center;
+    margin:  0 10%;
+    background: rgb(85, 82, 82);
+
+}
+.leftContainer {
+    background: url('beach.jpg');
+    width: 30%;
+    background-position: center;
+    background-size: 1000px 1000px;
+    background-repeat: no-repeat;
+    
+}
+.odin {
+    background-color: rgba(12, 12, 12, 0.329);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    height: 150px;
+}
+.odinLogo {
+    width: 120px;
+    height: 120px;
+}
+.odinText {
+    color: white;
+    font-size: 4rem;
+    font-family: "Skranji", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.rightContainer {
+    
+    border-bottom: 5px solid rgba(12, 12, 12, 0.11);
+    width: 50%;
+    background: white;
+
+}
+p {
+    padding: 4rem 6rem 1rem 2rem;
+    font-size: 1.5rem;
+    
+    text-align: left;
+}
+.inputContainer {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+    
+}
+input {
+    margin: 10px 20px 10px 0;
+    height: 25px;
+    width: 250px;
+    border-radius: 3px;
+    border: .5px solid black;
+    
+}
+.midSection {
+    box-shadow: 0px 15px 20px -20px rgba(0,0,0,0.45);
+    padding-bottom: 40px;
+   
+    margin: 0 0 30px 0;
+    padding: 1rem 0.2rem 1rem 2rem;
+}
+.youKnow {
+    padding-top: 0;
+}
+button {
+    background: rgb(5, 139, 12);
+    width: 220px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    color: white;
+}
+button:active {
+    transform: scale(0.70);
+    transform: translateY(2px); /* Moves the button down by 4px */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); /* Adjust the shadow to be less prominent */
+  }
+.bottomHalf {
+    padding: 1rem 0.2rem 1rem 2rem;
+}
+.logIn {
+    padding: 0;
+    font-size: 1.1rem;
+}
+label {
+    position: relative;
+}
+.divStack {
+    display: flex;
+    flex-direction: column;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+input:invalid {
+    border-color: red;
+  }
+  
+  input:valid {
+    border-color: green;
+  }
+  a {
+    color: blue;
+    text-decoration: none;
+  }
+  @media (max-width: 1000px){
+    .mainContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3%;
+    }
+    .leftContainer {
+        width: 97%;
+    }
+    .rightContainer {
+        width: 97%;
+    }
+  }

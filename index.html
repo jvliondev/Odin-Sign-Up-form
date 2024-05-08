@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+<body class="mainContainer">
+    <section class="leftContainer">
+        <div class="odin">
+            <img class="odinLogo" src="odin-logo.png" alt="The odin logo">
+            <h1 class="odinText">ODIN</h1>
+        </div>
+    </section>
+    <section class="rightContainer">
+        <section class="topHalf"></section>
+            <p>This is not a real online service! You know you need something<br>like this in your life to help you realize your deepest dreams.<br> Sign up <em>now</em> to get started.</p>
+            <p class="youKnow">You <em>know</em> you want to.</p>
+           <section class="midSection">
+                <h3>Let's do this!</h3>
+                <div class="inputContainer">
+                    <form id="myForm" action="https://httpbin.org/post" method="post">
+                        <div class="divStack">
+                            <label for="first_name">First Name:</label>
+                            <input type="text" id="first_name" name="first_name" required>
+                        </div>
+                        <div class="divStack">
+                            <label for="last_name">Last Name:</label>
+                            <input type="text" id="last_name" name="last_name" required>
+                        </div>
+                        <div class="divStack">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="divStack">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                        </div>
+                        <div class="divStack">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required oninput="validatePassword()">
+                            <span id="wrongPassword"></span>
+                        </div>
+                        <div class="divStack">
+                            <label for="retype_password">Retype Password:</label>
+                            <input type="password" id="retype_password" name="retype_password" required oninput="validatePassword()">
+                        </div>
+                </form>
+                </div>
+            </section>
+        <section class="bottomHalf">
+            <button type="submit" form="myForm">Create Account</button>
+            <p class="logIn">Already have an acount?<a href="" target="_blank">Log in</a></p>
+        </section>
+    </section>
+     <script>
+    // Your JavaScript code goes here
+    window.onload = function() {
+      function validatePassword() {
+        let password = document.getElementById('password');
+        let retype_password = document.getElementById('retype_password');
+        let wrongPassword = document.getElementById('wrongPassword');
+
+        if (password && retype_password) {
+          if (password.value === '' || password.value !== retype_password.value) {
+            wrongPassword.textContent = '*Passwords do not match';
+          } else {
+            wrongPassword.textContent = '';
+          }
+        }
+      }
+
+      // Set the oninput event handlers
+      document.getElementById('password').oninput = validatePassword;
+      document.getElementById('retype_password').oninput = validatePassword;
+    };
+  </script>
+</body>
+</html>
